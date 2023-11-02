@@ -2,6 +2,8 @@ Given an array, A, of N integers, print A's elements in reverse order as a singl
 
 Solution:
 
+Method_1:
+
 #!/bin/python3
 
 import math
@@ -22,3 +24,59 @@ if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))
     
     print_array(arr)
+
+
+Method_2:
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def print_array(array):
+    array.reverse()
+    for k in range(len(array)):
+        print(array[k], end=' ')
+    return
+
+if __name__ == '__main__':
+    
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    
+    print_array(arr)
+
+Method_3:
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def print_array(array):
+    left = 0
+    right = len(array) - 1
+    while left < right:
+        temp_value = array[left]
+        array[left] = array[right]
+        array[right] = temp_value
+        left +=1
+        right -=1
+    print(*array, end=' ')
+    return
+
+if __name__ == '__main__':
+    
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    
+    print_array(arr)
+
