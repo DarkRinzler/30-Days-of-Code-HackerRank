@@ -69,7 +69,7 @@ def print_array(array):
         array[right] = temp_value
         left +=1
         right -=1
-    print(*array, end=' ')
+    print(' '.join(map(str, array)))
     return
 
 if __name__ == '__main__':
