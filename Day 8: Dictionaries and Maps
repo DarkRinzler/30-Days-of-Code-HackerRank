@@ -1,0 +1,41 @@
+Given n names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. 
+For each 'name' queried, print the associated entry from your phone book on a new line in the form 'name=phoneNumber'; if an entry for 'name' is not found, print 'Not found' instead.
+
+Note: Your phone book should be a Dictionary/Map/HashMap data structure.
+
+Solution:
+
+Method_1:
+
+def input_dict(number):
+    phone_book = {}
+    fr_name, phone_num = [], []
+    for k in range(number):
+        entry = list(map(str, input().rstrip().split()))
+        for s in entry:
+            if s.isnumeric():
+                phone_num.append(int(s))
+            else:
+                fr_name.append(s)
+        phone_book[fr_name[k]] = phone_num[k]
+    #key_list = list(phone_book.keys())
+    #val_list = list(phone_book.values())
+    return phone_book#print(key_list, val_list)
+    
+def entry_check(number, phone_book):
+    for k in range(number): 
+        name = input().rstrip()
+        if name in phone_book:
+            print(name + '=' + str(phone_book[name]))
+        else:
+            print('Not found')
+    return
+    
+
+if __name__ == '__main__': 
+    
+    entries = int(input().strip())
+    
+    phone_book = input_dict(entries)
+    
+    entry_check(entries, phone_book)
