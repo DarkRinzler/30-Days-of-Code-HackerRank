@@ -11,15 +11,9 @@ Method_1:
 
 def input_dict(number):
     phone_book = {}
-    fr_name, phone_num = [], []
     for k in range(number):
         entry = list(map(str, input().rstrip().split()))
-        for s in entry:
-            if s.isnumeric():
-                phone_num.append(int(s))
-            else:
-                fr_name.append(s)
-        phone_book[fr_name[k]] = phone_num[k]
+        phone_book[entry[0]] = entry[1]
     return phone_book
     
 def entry_check(number, phone_book):
@@ -42,3 +36,11 @@ if __name__ == '__main__':
     phone_book = input_dict(entries)
     
     entry_check(entries, phone_book)
+
+
+Method_2:
+
+
+
+
+
