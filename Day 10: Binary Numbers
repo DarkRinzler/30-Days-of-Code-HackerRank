@@ -60,7 +60,7 @@ if __name__ == '__main__':
     
     n = int(input().strip())
     
-    array1, array2 = [], []
+    array1 = []
     
     counter, max_num = 0, 0
     
@@ -73,3 +73,34 @@ if __name__ == '__main__':
             max_num = max(max_num, counter)
             counter = 0
     print(max(max_num, counter))
+
+Method_3:
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def binary(num, counter, max_num):
+    if num <= 1:
+        counter += 1
+        max_num = max(max_num, counter)
+        return max_num
+    else:
+        if num % 2 == 1:
+            counter += 1
+            max_num = max(max_num, counter)
+        else:
+            counter = 0
+        return binary(num // 2, counter, max_num)
+
+if __name__ == '__main__':
+    
+    n = int(input().strip())
+    
+    counter, max_num = 0, 0
+    
+    print(binary(n, counter, max_num))
