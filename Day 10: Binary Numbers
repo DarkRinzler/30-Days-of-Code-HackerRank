@@ -1,0 +1,37 @@
+Given a base-10 integer, n, convert it to binary (base-2). Then find and print the base-10 integer denoting the maximum number of consecutive 1's in n's binary representation. 
+
+Solution:
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def binary(num, arr):
+    if num <= 1:
+        arr.append(1)
+        return arr
+    else:
+        arr.append(num % 2)
+        return binary(num // 2, arr)
+
+if __name__ == '__main__':
+    
+    n = int(input().strip())
+    
+    array1, array2 = [], []
+    
+    binary_form = binary(n, array1)
+    
+    c = 0
+    
+    for k in range(len(binary_form)):
+        if binary_form[k] == 1:
+            c +=1
+        else:
+            c = 0
+        array2.append(c)
+    print(max(array2))
