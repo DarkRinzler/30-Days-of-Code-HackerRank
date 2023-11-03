@@ -2,6 +2,8 @@ Given a base-10 integer, n, convert it to binary (base-2). Then find and print t
 
 Solution:
 
+Method_1:
+
 #!/bin/python3
 
 import math
@@ -26,12 +28,48 @@ if __name__ == '__main__':
     
     binary_form = binary(n, array1)
     
-    c = 0
+    counter = 0
     
     for k in range(len(binary_form)):
         if binary_form[k] == 1:
-            c +=1
+            counter +=1
         else:
-            c = 0
-        array2.append(c)
+            counter = 0
+        array2.append(counter)
     print(max(array2))
+
+Method_2:
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def binary(num, arr):
+    if num <= 1:
+        arr.append(1)
+        return arr
+    else:
+        arr.append(num % 2)
+        return binary(num // 2, arr)
+
+if __name__ == '__main__':
+    
+    n = int(input().strip())
+    
+    array1, array2 = [], []
+    
+    counter, max_num = 0, 0
+    
+    binary_form = binary(n, array1)
+    
+    for k in binary_form:
+        if k == 1:
+            counter +=1
+        else:
+            max_num = max(max_num, counter)
+            counter = 0
+    print(max(max_num, counter))
