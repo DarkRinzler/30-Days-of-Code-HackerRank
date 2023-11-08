@@ -1,6 +1,21 @@
+# ===================================
+#   Problem statement & information
+# ===================================
 
+# The absolute difference between two integers, a and b, is written as |a-b|. The maximum absolute difference between two integers in a set of 
+# positive integers, elements, is the largest absolute difference between any two integers in __elements. 
+# Complete the Difference class by writing the following:
+# • A class constructor that takes an array of integers as a parameter and saves it to the  instance variable.
+# • A computeDifference method that finds the maximum absolute difference between any numbers in __elements and stores it in the maximumDifference
+#   instance variable.
 
-Solution:
+# Difficulty: Easy
+# Max Score: 30
+# Language: Python
+
+# ===================================
+#             Solution
+# ===================================
 
 class Difference:
     def __init__(self, a):
