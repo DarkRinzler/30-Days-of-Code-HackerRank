@@ -1,8 +1,20 @@
-Given an array, A, of N integers, print A's elements in reverse order as a single line of space-separated numbers.
+# ===================================
+#   Problem statement & information
+# ===================================
 
-Solution:
+# Given an array, A, of N integers, print A's elements in reverse order as a single line of space-separated numbers.
 
-Method_1:
+# Difficulty: Easy
+# Max Score: 30
+# Language: Python
+
+# ===================================
+#             Solutions
+# ===================================
+
+# ===================================
+#             Method 1
+# ===================================
 
 #!/bin/python3
 
@@ -26,7 +38,9 @@ if __name__ == '__main__':
     print_array(arr)
 
 
-Method_2:
+# ===================================
+#             Method 2
+# ===================================
 
 #!/bin/python3
 
@@ -50,7 +64,10 @@ if __name__ == '__main__':
     
     print_array(arr)
 
-Method_3:
+
+# ===================================
+#             Method 3
+# ===================================
 
 #!/bin/python3
 
