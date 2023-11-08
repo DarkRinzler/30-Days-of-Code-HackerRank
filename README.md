@@ -3,7 +3,7 @@ The repository contains the solutions written in Python3 of the 30 Days of Code 
 
 |  Day  |                Challenge                |                                     Problem / Solution                                 |    Difficulty    | |   Score   | 
 | :---: | :-------------------------------------: | :------------------------------------------------------------------------------------: | :--------------: | | :-------: |
-|   0   |              Hello, World               | [Problem](https://www.hackerrank.com/challenges/30-hello-world/problem)/[Solution]()   |       Easy       | |     30    |
+|   0   |              Hello, World               | [Problem]()/[Solution]()   |       Easy       | |     30    |
 |   1   |               Data Types                | [Problem]( )[Solution]()                                                               |       Easy       | |     30    |
 |   2   |               Operators                 | [Problem]( )[Solution]()                                                               |       Easy       | |     30    |
 |   3   |     Intro to Conditional Statements     | [Problem]( )[Solution]()                                                               |       Easy       | |     30    |
