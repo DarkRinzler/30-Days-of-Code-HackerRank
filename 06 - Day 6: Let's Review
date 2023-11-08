@@ -1,9 +1,22 @@
-Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line (see the Sample below for more detail).
-Note: 0 is considered to be an even index.
+# ===================================
+#   Problem statement & information
+# ===================================
 
-Solution:
+# Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a 
+# single line (see the Sample below for more detail). Note: 0 is considered to be an even index.
 
-Method_1:
+# Difficulty: Easy
+# Max Score: 30
+# Language: Python
+
+# ===================================
+#             Solutions
+# ===================================
+
+# ===================================
+#             Method 1
+# ===================================
+
 
 #!/bin/python3
 
@@ -29,7 +42,10 @@ if __name__ == '__main__':
     
     output(int(input()))
 
-Method_2:
+
+# ===================================
+#             Method 2
+# ===================================
 
 #!/bin/python3
 
