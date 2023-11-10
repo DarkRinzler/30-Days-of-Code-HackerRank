@@ -1,0 +1,94 @@
+# ===================================
+#   Problem statement & information
+# ===================================
+
+# Complete the insert function in your editor so that it creates a new Node (pass data as the Node constructor argument) and inserts it at the tail of the linked list referenced by 
+# the head parameter. Once the new node is added, return the reference to the head node.
+#
+# Note: The head argument is null for an empty list.
+
+# Difficulty: Easy
+# Max Score: 30
+# Language: Python
+
+# ===================================
+#             Solutions
+# ===================================
+
+# ===================================
+#             Method 1
+# ===================================
+
+#!/bin/python3
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None 
+class Solution: 
+    def display(self,head):
+        current = head
+        while current:
+            print(current.data,end=' ')
+            current = current.next
+
+    def insert(self, head, data):
+        new_node = Node(data)
+        if head is None:
+            head = new_node
+            return head
+        else:
+            current_node = head
+            while (current_node.next):
+                current_node = current_node.next
+            current_node.next = new_node
+            return head
+
+mylist= Solution()
+T=int(input())
+head=None
+for i in range(T):
+    data=int(input())
+    head=mylist.insert(head,data)    
+mylist.display(head); 	  
+
+
+# ===================================
+#             Method 2
+# ===================================
+
+#!/bin/python3
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None 
+class Solution: 
+    def display(self,head):
+        current = head
+        while current:
+            print(current.data,end=' ')
+            current = current.next
+
+    def insert(self, head, data):
+        new_node = Node(data)
+        if head is None:
+            head = new_node
+            self.current_node = new_node
+            return head
+        else:
+            self.current_node.next = new_node
+            self.current_node = new_node
+            #head = current_node.data
+            #while (current_node.next):
+            #    current_node = current_node.next
+            #current_node.next = new_node
+            return head
+
+mylist= Solution()
+T=int(input())
+head=None
+for i in range(T):
+    data=int(input())
+    head=mylist.insert(head,data)    
+mylist.display(head); 	  
