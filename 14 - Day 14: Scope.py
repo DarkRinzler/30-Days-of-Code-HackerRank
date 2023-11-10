@@ -17,6 +17,8 @@
 #             Solution
 # ===================================
 
+#!/bin/python3
+
 class Difference:
     def __init__(self, a):
         self.__elements = a
