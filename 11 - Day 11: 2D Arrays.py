@@ -37,8 +37,7 @@ def sum_hourglass(arr, max_arr):
                 partial_sum += arr[j][k+s] + arr[j+2][k+s]
             partial_sum = partial_sum + arr[j+1][s+1]
             max_arr.append(partial_sum)
-    print(max(max_arr))
-    return
+    return max(max_arr)
         
 
 if __name__ == '__main__':
